@@ -1,5 +1,7 @@
 <?php
 include_once("function/helper.php");
+$page = isset($_GET['page']) ? $_GET['page'] : false;
+
 ?>
     <!DOCTYPE html>
     
@@ -20,18 +22,30 @@ include_once("function/helper.php");
 
                     <div id="user">
 
-                        <a href="<?php echo BASE_URL." index.php?page=login "; ?>">Login</a>
-                        <a href="<?php echo BASE_URL." index.php?page=register "; ?>">Register</a>
+                        <a href="<?php echo BASE_URL."index.php?page=login"; ?>">Login</a>
+                        <a href="<?php echo BASE_URL."index.php?page=register"; ?>">Register</a>
                     </div>
 
-                    <a href="<?php echo BASE_URL." index.php?page=keranjang "; ?>" id="button-keranjang">
+                    <a href="<?php echo BASE_URL."index.php?page=keranjang"; ?>" id="button-keranjang">
                         <img src="<?php echo BASE_URL."images/cart.png";?>" alt="Foto keranjang"/>
                     </a>
                 </div>
 
             </div>
 
-            <div id="content"></div>
+            <div id="content">
+            <?php
+            $filename = "$page.php";
+           
+
+            if(file_exists($filename)){
+                include_once($filename);
+            }
+            else{
+                echo "Maaf file yang anda tuju tidak ada dalam system";  
+            }
+            ?>
+            </div>
             <div id="footer">
                 <p>Copyright 2020</p>
             </div>

@@ -57,3 +57,8 @@ body {
     font-size: 10px;
     margin: 0px;
 }
+
+#container #content {
+    padding: 10px 0px;
+    overflow: hidden;
+}
