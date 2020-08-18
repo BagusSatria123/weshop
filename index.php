@@ -2,10 +2,11 @@
 include_once("function/helper.php");
 ?>
     <!DOCTYPE html>
-    <html lang="en">
+    
 
     <head>
         <title>weshop | Barang - barang elektronik</title>
+        <link href="<?php echo BASE_URL."css/style.css";?>" type="text/css" rel="stylesheet" />
     </head>
 
     <body>
@@ -23,7 +24,7 @@ include_once("function/helper.php");
                         <a href="<?php echo BASE_URL." index.php?page=register "; ?>">Register</a>
                     </div>
 
-                    <a href="<?php echo BASE_URL." index.php?page=keranjang "; ?>">
+                    <a href="<?php echo BASE_URL." index.php?page=keranjang "; ?>" id="button-keranjang">
                         <img src="<?php echo BASE_URL."images/cart.png";?>" alt="Foto keranjang"/>
                     </a>
                 </div>

@@ -1,3 +1,2 @@
 <?php
-define("BASE URL","http://localhost/weshop");
-?>
+define("BASE_URL","http://localhost/weshop/");
