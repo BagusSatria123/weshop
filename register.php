@@ -11,6 +11,11 @@
 
     if($notif == "require"){
         echo "<div class='notif'>Maaf data Anda di form belum dilengkapi</div>";
+    }else if($notif == "password"){
+        echo "<div class='notif'>Maaf password Anda yang dimasukkan tidak sama</div>";
+    }
+    else if($notif == "email"){
+        echo "<div class='notif'>Maaf email anda sudah terdaftar</div>";
     }
     ?>
 
