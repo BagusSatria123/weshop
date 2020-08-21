@@ -2,6 +2,8 @@
 
 session_start();
 include_once("function/helper.php");
+include_once("function/koneksi.php");
+
 $page = isset($_GET['page']) ? $_GET['page'] : false;
 
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
