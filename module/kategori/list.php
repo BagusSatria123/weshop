@@ -1,6 +1,6 @@
 <div id="frame-tambah">
 
-    <a href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=form";?>" class="element-forme">+ Tambah Kategori</a>
+    <a href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=form";?>" class="element-form">+ Tambah Kategori</a>
 
 </div>
 
@@ -13,22 +13,25 @@ if(mysqli_num_rows($queryKategory) == 0){
 }else{
     echo "<table class='table-list'>";
 
-    echo "<tr>
+    echo "<tr> 
+            <th>No</th>
             <th>Kategori</th>
             <th>Status</th>
             <th>Action</th>
             </tr>";
 
     $no=1;
-    while($row=mysql_fetch_assoc($queryKategory)){
+    while($row=mysqli_fetch_assoc($queryKategory)){
         echo "<tr>
         <td>$no</td>
         <td>$row[kategori]</td>
-        <td>>$row[status]</td>
+        <td>$row[status]</td>
         <td>
-        <a class='".BASE_URL."index.php?page=my_profile&module=kategori&action=form&kategori_id=$row[kategori_id]>Edit</a>
+        <a href='".BASE_URL."index.php?page=my_profile&module=kategori&action=form&kategori_id=$row[kategori_id]'>Edit</a>
         </td>
         </tr>";
+
+        $no++;
     }
     echo "</table>";
 }
