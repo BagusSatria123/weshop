@@ -1,33 +1,35 @@
 <div id="frame-tambah">
 
-    <a href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=form";?>" class="tombol-action">+ Tambah Kategori</a>
+    <a href="<?php echo BASE_URL."index.php?page=my_profile&module=barang&action=form";?>" class="tombol-action">+ Tambah Barang</a>
 
 </div>
 
 <?php
-$queryKategory = mysqli_query($koneksi,"SELECT * FROM kategori");
+$query = mysqli_query($koneksi,"SELECT * FROM barang");
 
-if(mysqli_num_rows($queryKategory) == 0){
-    echo "<h3>Saat ini belum ada nama kategori di dalam tabel kategori</h3>";
+if(mysqli_num_rows($query) == 0){
+    echo "<h3>Saat ini belum ada nama barang di dalam tabel barang</h3>";
 
 }else{
     echo "<table class='table-list'>";
 
     echo "<tr class='baris-title'> 
             <th class='kolom-nomor'>No</th>
-            <th class='kiri'>Kategori</th>
+            <th class='kiri'>Barang</th>
+            <th class='kiri'>Harga</th>
             <th class='tengah'>Status</th>
             <th class='kanan'>Action</th>
             </tr>";
 
     $no=1;
-    while($row=mysqli_fetch_assoc($queryKategory)){
+    while($row=mysqli_fetch_assoc($query)){
         echo "<tr>
         <td class='kolom-nomor'>$no</td>
-        <td class='kiri'>$row[kategori]</td>
+        <td class='kiri'>$row[barang]</td>
+        <td class='kiri'>$row[harga]</td>
         <td class='tengah'>$row[status]</td>
         <td class='kanan'>
-        <a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=kategori&action=form&kategori_id=$row[kategori_id]'>Edit</a>
+        <a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=barang&action=form&barang_id=$row[barang_id]'>Edit</a>
         </td>
         </tr>";
 
