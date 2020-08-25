@@ -74,12 +74,6 @@ body {
     margin-bottom: 15px;
 }
 
-#frame .element-forme {
-    margin: 7px;
-    float: right;
-    padding: 2px 10px;
-}
-
 .element-form label {
     display: block;
     font-weight: bold;
@@ -153,4 +147,54 @@ body {
     width: 835px;
     padding: 10px;
     background: white;
+}
+
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-list tr .baris-title {
+    background: #E6E6E6;
+}
+
+.table-list tr th,
+.table-list tr td {
+    padding: 10px 7px;
+}
+
+.kolom-nomor {
+    width: 20px;
+    text-align: center;
+}
+
+.kiri {
+    text-align: left;
+}
+
+.tengah {
+    text-align: center;
+}
+
+.kanan {
+    text-align: right;
+}
+
+#frame-tambah {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.tombol-action {
+    background: #1e5474;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 3px;
+}
+
+.tombol-action :hover {
+    background: orange;
 }

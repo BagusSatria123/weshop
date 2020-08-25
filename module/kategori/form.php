@@ -1,9 +1,9 @@
 <?php
 $kategori_id=isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
 
-$kategori="";
-$status="";
-$button="Add";
+$kategori= "";
+$status= "";
+$button= "Add";
 
 if($kategori_id){
     $queryKategori = mysqli_query($koneksi,"SELECT * FROM kategori WHERE kategori_id='$kategori_id'");
@@ -30,6 +30,6 @@ if($kategori_id){
     </div>
 
     <div class="element-form">
-        <span><input type="submit" name="button" <?php echo $button;?>/></span>
+        <span><input type="submit" name="button" value="<?php echo $button;?>"/></span>
     </div>
 </form>
