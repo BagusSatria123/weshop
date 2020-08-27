@@ -31,7 +31,7 @@ if(mysqli_num_rows($query) == 0){
         <td class='kiri'>".rupiah($row["harga"])."</td>
         <td class='tengah'>$row[status]</td>
         <td class='kanan'>
-        <a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=kategori&action=form&barang_id=$row[barang_id]'>Edit</a>
+        <a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=barang&action=form&barang_id=$row[barang_id]'>Edit</a>
         </td>
         </tr>";
 

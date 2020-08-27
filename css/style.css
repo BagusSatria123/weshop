@@ -198,3 +198,8 @@ body {
 .tombol-action :hover {
     background: orange;
 }
+
+element .style {
+    width: 200px;
+    vertical-align: middle;
+}
