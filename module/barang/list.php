@@ -5,7 +5,7 @@
 </div>
 
 <?php
-$query = mysqli_query($koneksi,"SELECT * FROM barang");
+$query = mysqli_query($koneksi,"SELECT barang.*, kategori.kategori FROM barang JOIN kategori ON barang.kategori_id=kategori.kategori_id ORDER BY nama_barang ASC");
 
 if(mysqli_num_rows($query) == 0){
     echo "<h3>Saat ini belum ada nama barang di dalam tabel barang</h3>";
@@ -16,6 +16,7 @@ if(mysqli_num_rows($query) == 0){
     echo "<tr class='baris-title'> 
             <th class='kolom-nomor'>No</th>
             <th class='kiri'>Barang</th>
+            <th class='kiri'>kategori</th>
             <th class='kiri'>Harga</th>
             <th class='tengah'>Status</th>
             <th class='kanan'>Action</th>
@@ -26,6 +27,7 @@ if(mysqli_num_rows($query) == 0){
         echo "<tr>
         <td class='kolom-nomor'>$no</td>
         <td class='kiri'>$row[nama_barang]</td>
+        <td class='kiri'>$row[kategori]</td>
         <td class='kiri'>$row[harga]</td>
         <td class='tengah'>$row[status]</td>
         <td class='kanan'>
