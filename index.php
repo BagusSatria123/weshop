@@ -60,7 +60,7 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
                 include_once($filename);
             }
             else{
-                echo "Maaf file yang anda tuju tidak ada dalam system";  
+                include_once("main.php");
             }
             ?>
             </div>
