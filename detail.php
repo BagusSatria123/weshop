@@ -12,7 +12,7 @@ $barang_id = $_GET['barang_id'];
 $query = mysqli_query($koneksi,"SELECT * FROM barang WHERE barang_id = '$barang_id' AND status = 'on'");
 $row = mysqli_fetch_assoc($query);
 
-echo "<div id='detail_barang'>
+echo "<div id='detail-barang'>
         <h2>$row[nama_barang]</h2>
         <div id='frame-gambar'>
         <img src='".BASE_URL."images/barang/$row[gambar]'/>
