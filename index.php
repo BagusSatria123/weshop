@@ -21,6 +21,9 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
     <head>
         <title>weshop | Barang - barang elektronik</title>
         <link href="<?php echo BASE_URL."css/style.css";?>" type="text/css" rel="stylesheet" />
+        <script src="<?php echo BASE_URL."js/jquery-3.5.1.min.js";?>"></script>
+        <script src="<?php echo BASE_URL."js/Slides-SlidesJS-3/source/jquery.slides.min.js";?>"></script>
+
     </head>
 
     <body>
