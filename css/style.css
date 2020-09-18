@@ -353,3 +353,12 @@ body {
     font-weight: bold;
     vertical-align: top;
 }
+
+.update-quantity {
+    width: 30px;
+    text-align: center;
+}
+
+.table-list tr {
+    border-bottom: 1px solid #1e5474;
+}
